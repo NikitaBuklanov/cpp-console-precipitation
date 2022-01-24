@@ -17,11 +17,20 @@ int main()
     try
     {
         read("data.txt", subscriptions, size);
+        cout << "***** Осадки *****\n\n";
         for (int i = 0; i < size; i++)
         {
+            /********** вывод даты **********/
+            cout << "Дата........: ";
+            // вывод дня
             cout << subscriptions[i]->den_mes_kol.day << ' ';
+            // вывод месяца
             cout << subscriptions[i]->den_mes_kol.month << ' ';
+            /********** вывод количества осадков и тип осадков **********/
+            cout << "Осадки...........: ";
+            // вывод количества осадков
             cout << subscriptions[i]->den_mes_kol.kol_precipitations << ' ';
+            // вывод типа осадков
             cout << subscriptions[i]->vid_precipitations.tip_precipitations << '\n';
         }
         for (int i = 0; i < size; i++)
